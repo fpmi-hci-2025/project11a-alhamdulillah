@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Презентация проекта
-permalink: /site/presentation
+permalink: /presentation
 ---
 
 # Презентация проекта

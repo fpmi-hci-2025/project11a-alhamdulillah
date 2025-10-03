@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Функциональные требования
-permalink: /site/functional-requirements
+permalink: /functional-requirements
 ---
 
 # Функциональные требования

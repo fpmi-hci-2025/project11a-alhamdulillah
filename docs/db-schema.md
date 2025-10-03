@@ -1,9 +1,9 @@
 ---
 layout: page
-title: API проекта
-permalink: /site/api
+title: Схема базы данных
+permalink: /db-schema
 ---
 
-# API проекта
+# Схема базы данных
 
 (страница-структура, наполнение будет добавлено позже)

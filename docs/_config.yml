@@ -5,4 +5,3 @@ plugins:
 locale: ru-RU
 title: "Махачкала — проект"
 description: "Сайт проекта с разделами как в Wiki"
-baseurl: "/site"

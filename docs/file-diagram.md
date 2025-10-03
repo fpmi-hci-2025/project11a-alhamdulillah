@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Диаграмма файлов приложения
-permalink: /site/file-diagram
+permalink: /file-diagram
 ---
 
 # Диаграмма файлов приложения

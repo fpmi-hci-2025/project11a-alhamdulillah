@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Дополнительная спецификация
-permalink: /site/supplementary-spec
+permalink: /supplementary-spec
 ---
 
 # Дополнительная спецификация
