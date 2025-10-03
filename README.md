@@ -12,6 +12,7 @@ Restaurant network, which sells shawarma for 5 roubles.
 
 ## Contributing
 
-Hodin Dmitry — <b>Team Lead</b> + <i>Mobile Developer</i>  
+Hodin Dmitry — <b>Team Lead</b> + <i>Test engineer</i>  
 Yan Bashev — <i>Frontend Developer</i>  
-Andrey Stepanov — <i>Backend Developer</i>  
+Andrey Stepanov — <i>Mobile Developer</i>  
+Kohan Daniil - <i>Backend Developer</i>
