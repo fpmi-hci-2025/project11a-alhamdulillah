@@ -1,0 +1,22 @@
+@startuml
+'ERD — схема базы данных'
+entity Пользователь {
+ id : int
+ имя : String
+ email : String
+}
+entity Заказ {
+ id : int
+ идентификаторПользователя : int
+ статус : String
+ времяЗаказа : DateTime
+}
+entity Блюдо {
+ id : int
+ название : String
+ цена : double
+ категория : String
+}
+Пользователь ||-- {Заказ : делает
+Заказ {order}-- {Блюдо : включает
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+skinparam packageStyle rectangle
+left to right direction
+
+' Диаграмма компонентов
+title Диаграмма компонентов системы ресторана «Махачкала»
+
+rectangle 'API сервер' {
+  rectangle 'Сервис управления заказами' as OS {
+  }
+  rectangle 'Сервис управления меню' as MS {
+  }
+  rectangle 'Сервис интеграции с доставкой' as DS {
+  }
+  rectangle 'Сервис обработки платежей' as PS {
+  }
+}
+
+OS -->> MS : получает данные меню
+OS -->> DS : передаёт данные для доставки
+OS -->> PS : передаёт данные для оплаты
+MS -->> OS : предоставляет данные меню
+
+@enduml

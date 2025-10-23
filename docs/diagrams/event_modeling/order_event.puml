@@ -1,0 +1,15 @@
+@startuml
+skinparam packageStyle rectangle
+left to right direction
+
+package 'События заказа' {
+  event 'Пользователь делает заказ' as E1
+  event 'Ресторан получает заказ' as E2
+  event 'Блюдо готовится' as E3
+  event 'Заказ готов' as E4
+
+  E1 -> E2 : отправка заказа
+  E2 -> E3 : начало приготовления
+  E3 -> E4 : завершение приготовления
+}
+@enduml

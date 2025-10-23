@@ -1,0 +1,15 @@
+@startuml
+'Диаграмма последовательности — отслеживание заказа'
+actor Пользователь
+participant "Мобильное приложение" as App
+participant "API сервер" as Server
+participant "Система доставки" as Delivery
+activate Пользователь
+Пользователь -> App : открывает приложение
+App -> Server : запрашивает статус заказа
+Server -> Delivery : запрашивает статус у системы доставки
+Delivery -> Server : возвращает статус
+Server -> App : отправляет статус заказа
+App -> Пользователь : отображает статус
+deactivate Пользователь
+@enduml

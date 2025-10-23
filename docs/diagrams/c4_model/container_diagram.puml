@@ -1,0 +1,21 @@
+@startuml
+skinparam packageStyle rectangle
+left to right direction
+
+' Диаграмма контейнеров
+title Диаграмма контейнеров системы ресторана «Махачкала»
+
+rectangle 'Мобильное приложение' as App {
+}
+rectangle 'Веб-сайт' as Web {
+}
+rectangle 'API сервер' as Api {
+}
+rectangle 'База данных' as DB {
+}
+
+App -->> Api : отправляет запросы
+Web -->> Api : отправляет запросы
+Api -->> DB : сохраняет/получает данные
+
+@enduml
