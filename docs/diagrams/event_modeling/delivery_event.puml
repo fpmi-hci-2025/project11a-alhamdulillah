@@ -1,0 +1,15 @@
+@startuml
+skinparam packageStyle rectangle
+left to right direction
+
+package 'События доставки' {
+  event 'Курьер получает заказ' as E1
+  event 'Курьер прокладывает маршрут' as E2
+  event 'Курьер доставляет заказ' as E3
+  event 'Пользователь получает заказ' as E4
+
+  E1 -> E2 : получение информации о заказе
+  E2 -> E3 : движение к клиенту
+  E3 -> E4 : передача заказа
+}
+@enduml

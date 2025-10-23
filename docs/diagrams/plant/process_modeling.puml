@@ -1,0 +1,33 @@
+@startuml
+skinparam packageStyle rectangle
+left to right direction
+
+actor 'Пользователь' as U
+actor 'Курьер' as C
+participant 'Мобильное приложение' as App
+participant 'Сервер' as S
+participant 'База данных' as DB
+
+U -> App : открывает приложение и выбирает блюда
+App -> S : отправляет данные заказа
+S -> DB : сохраняет заказ
+DB -> S : подтверждает сохранение
+S -> App : возвращает номер заказа
+App -> U : показывает номер заказа
+S -> C : назначает курьера
+C -> S : подтверждает получение заказа
+C -> U : доставляет заказ
+U -> S : подтверждает получение заказа
+S -> DB : обновляет статус заказа
+
+activate U
+activate C
+activate App
+activate S
+activate DB
+deactivate U
+deactivate C
+deactivate App
+deactivate S
+deactivate DB
+@enduml

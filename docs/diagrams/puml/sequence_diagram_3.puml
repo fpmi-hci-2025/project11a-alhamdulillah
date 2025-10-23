@@ -1,0 +1,15 @@
+@startuml
+'Диаграмма последовательности — просмотр меню'
+actor Пользователь
+participant "Мобильное приложение" as App
+participant "API сервер" as Server
+participant "База данных" as DB
+activate Пользователь
+Пользователь -> App : открывает приложение
+App -> Server : запрашивает меню
+Server -> DB : получает данные меню
+DB -> Server : возвращает данные
+Server -> App : отправляет меню
+App -> Пользователь : отображает меню
+deactivate Пользователь
+@enduml
