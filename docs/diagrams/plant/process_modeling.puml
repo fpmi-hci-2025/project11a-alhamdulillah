@@ -1,12 +1,10 @@
 @startuml
-skinparam packageStyle rectangle
-left to right direction
 
-actor 'Пользователь' as U
-actor 'Курьер' as C
-participant 'Мобильное приложение' as App
-participant 'Сервер' as S
-participant 'База данных' as DB
+actor "Пользователь" as U
+actor "Курьер" as C
+participant "Мобильное приложение" as App
+participant "Сервер" as S
+participant "База данных" as DB
 
 U -> App : открывает приложение и выбирает блюда
 App -> S : отправляет данные заказа
