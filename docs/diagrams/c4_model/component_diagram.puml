@@ -5,14 +5,14 @@ left to right direction
 ' Диаграмма компонентов
 title Диаграмма компонентов системы ресторана «Махачкала»
 
-rectangle 'API сервер' {
-  rectangle 'Сервис управления заказами' as OS {
+rectangle "API сервер" {
+  rectangle "Сервис управления заказами" as OS {
   }
-  rectangle 'Сервис управления меню' as MS {
+  rectangle "Сервис управления меню" as MS {
   }
-  rectangle 'Сервис интеграции с доставкой' as DS {
+  rectangle "Сервис интеграции с доставкой" as DS {
   }
-  rectangle 'Сервис обработки платежей' as PS {
+  rectangle "Сервис обработки платежей" as PS {
   }
 }
 
