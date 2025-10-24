@@ -1,25 +1,23 @@
 @startuml
-skinparam packageStyle rectangle
-left to right direction
 
-package 'Фронтенд' {
-  class 'Мобильное приложение' as App
-  class 'Веб-интерфейс' as Web
+package "Фронтенд" {
+  class "Мобильное приложение" as App
+  class "Веб-интерфейс" as Web
 }
 
-package 'Бэкенд' {
-  class 'API сервер' as S
-  class 'Сервис управления заказами' as OS
-  class 'Сервис управления меню' as MS
+package "Бэкенд" {
+  class "API сервер" as S
+  class "Сервис управления заказами" as OS
+  class "Сервис управления меню" as MS
 }
 
-package 'Хранилище данных' {
-  class 'База данных' as DB
+package "Хранилище данных" {
+  class "База данных" as DB
 }
 
-package 'Интеграция с сервисами' {
-  class 'Система доставки' as DS
-  class 'Платёжная система' as PS
+package "Интеграция с сервисами" {
+  class "Система доставки" as DS
+  class "Платёжная система" as PS
 }
 
 App -- S : отправляет запросы
