@@ -1,13 +1,13 @@
 @startuml
-skinparam packageStyle rectangle
-left to right direction
+title Диаграмма последовательности: События оплаты
 
-package "События оплаты" {
-  event "Пользователь выбирает способ оплаты" as E1
-  event "Система обрабатывает платёж" as E2
-  event "Платёж подтверждён" as E3
+actor "Пользователь" as User
+participant "Система оплаты" as System
 
-  E1 -> E2 : данные для оплаты
-  E2 -> E3 : подтверждение транзакции
-}
+User -> System : Выбирает способ оплаты (E1)
+activate System
+System -> System : Обрабатывает платёж (E2)
+System --> User : Подтверждение транзакции (E3)
+deactivate System
+
 @enduml
