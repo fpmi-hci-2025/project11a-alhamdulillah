@@ -1,0 +1,84 @@
+@startuml
+!define RECTANGLE class
+skinparam componentStyle rectangle
+title Инфраструктура проекта «Махачкала»
+
+package "Облачная инфраструктура (Render.com)" {
+  component "API сервер" as api [
+    Django REST Framework
+    PostgreSQL
+    Redis
+  ]
+  
+  component "Веб-приложение" as web [
+    React.js / Vue.js
+    Nginx
+  ]
+  
+  component "Статические файлы" as static [
+    CDN
+    S3-совместимое хранилище
+  ]
+}
+
+package "Сервисы CI/CD" {
+  component "GitHub Actions" as ci [
+    Тестирование
+    Сборка Docker
+    Деплой
+  ]
+  
+  component "SonarQube" as sonar [
+    Анализ кода
+    Проверка качества
+  ]
+  
+  component "Docker Registry" as docker [
+    Docker Hub / GitHub Packages
+  ]
+}
+
+package "Внешние сервисы" {
+  component "База данных" as db [
+    PostgreSQL
+  ]
+  
+  component "Кэш" as cache [
+    Redis
+  ]
+  
+  component "Очередь задач" as queue [
+    Celery + Redis
+  ]
+  
+  component "Объектное хранилище" as storage [
+    AWS S3 / MinIO
+  ]
+}
+
+package "Клиентские приложения" {
+  component "Браузер" as browser [
+    Веб-приложение
+  ]
+  
+  component "Мобильное приложение" as mobile [
+    React Native / Flutter
+  ]
+}
+
+api --> db : Чтение/запись
+api --> cache : Кэширование
+api --> queue : Асинхронные задачи
+api --> storage : Файлы
+
+web --> api : REST API
+web --> static : CSS, JS, изображения
+
+mobile --> api : REST API
+
+ci --> api : Деплой
+ci --> web : Деплой
+ci --> docker : Публикация образов
+ci --> sonar : Анализ качества
+
+@enduml

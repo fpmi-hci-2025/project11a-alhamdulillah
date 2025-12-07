@@ -1,0 +1,76 @@
+@startuml
+
+entity users {
+  * id : int <<PK>>
+  --
+  role : varchar(20)
+  name : varchar(100)
+  phone : varchar(20) <<U>>
+  email : varchar(100) <<U>>
+  password_hash : varchar(255)
+  created_at : datetime
+}
+
+entity restaurants {
+  * id : int <<PK>>
+  --
+  name : varchar(100)
+  address : text
+  latitude : decimal(10, 8)
+  longitude : decimal(11, 8)
+  schedule : varchar(255)
+  status : varchar(20)
+}
+
+entity promotions {
+  * id : int <<PK>>
+  --
+  title : varchar(255)
+  description : text
+  condition : text
+  start_date : date
+  end_date : date
+}
+
+entity dishes {
+  * id : int <<PK>>
+  --
+  name : varchar(255)
+  description : text
+  price : decimal(10, 2)
+  category : varchar(50)
+  image_url : varchar(500)
+  * restaurant_id : int <<FK>>
+  * promotion_id : int <<FK>>
+}
+
+entity orders {
+  * id : int <<PK>>
+  --
+  * user_id : int <<FK>>
+  * restaurant_id : int <<FK>>
+  status : varchar(30)
+  payment_method : varchar(30)
+  total_amount : decimal(10, 2)
+  delivery_address : text
+  created_at : datetime
+  completed_at : datetime
+}
+
+entity order_items {
+  * id : int <<PK>>
+  --
+  * order_id : int <<FK>>
+  * dish_id : int <<FK>>
+  quantity : int
+  price_at_order : decimal(10, 2)
+}
+
+users ||--o{ orders : "создаёт"
+restaurants ||--o{ dishes : "предлагает"
+restaurants ||--o{ orders : "обслуживает"
+promotions ||--o{ dishes : "включает"
+orders ||--|{ order_items : "содержит"
+dishes ||--o{ order_items : "входит в"
+
+@enduml
