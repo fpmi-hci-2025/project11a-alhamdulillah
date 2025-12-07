@@ -1,0 +1,5 @@
+Django>=4.2
+djangorestframework>=3.14
+drf-yasg>=1.21
+pyyaml>=6.0
+jinja2>=3.1
