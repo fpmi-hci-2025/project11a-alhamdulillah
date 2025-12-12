@@ -75,7 +75,7 @@ permalink: /db-schema
 
 # Физическая модель (ER-диаграмма)
 
-[ER-диаграмма БД](https://tinyurl.com/27q576qm)<!--[ER-диаграмма БД](./diagrams/puml/04_02_erd_diagram_physical.puml)-->
+[![ER-диаграмма БД](https://tinyurl.com/27q576qm)](https://tinyurl.com/27q576qm)<!--![ER-диаграмма БД](./diagrams/puml/04_02_erd_diagram_physical.puml)-->
 
 # SQL-файл
 

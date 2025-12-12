@@ -1,69 +1,80 @@
 @startuml
-!define RECTANGLE class
 skinparam componentStyle rectangle
 title Инфраструктура проекта «Махачкала»
 
 package "Облачная инфраструктура (Render.com)" {
-  component "API сервер" as api [
+  component "API сервер" as api
+  note right of api
     Django REST Framework
     PostgreSQL
     Redis
-  ]
+  end note
   
-  component "Веб-приложение" as web [
+  component "Веб-приложение" as web
+  note right of web
     React.js / Vue.js
     Nginx
-  ]
+  end note
   
-  component "Статические файлы" as static [
+  component "Статические файлы" as static
+  note right of static
     CDN
     S3-совместимое хранилище
-  ]
+  end note
 }
 
 package "Сервисы CI/CD" {
-  component "GitHub Actions" as ci [
+  component "GitHub Actions" as ci
+  note right of ci
     Тестирование
     Сборка Docker
     Деплой
-  ]
+  end note
   
-  component "SonarQube" as sonar [
+  component "SonarQube" as sonar
+  note right of sonar
     Анализ кода
     Проверка качества
-  ]
+  end note
   
-  component "Docker Registry" as docker [
+  component "Docker Registry" as docker
+  note right of docker
     Docker Hub / GitHub Packages
-  ]
+  end note
 }
 
 package "Внешние сервисы" {
-  component "База данных" as db [
+  component "База данных" as db
+  note right of db
     PostgreSQL
-  ]
+  end note
   
-  component "Кэш" as cache [
+  component "Кэш" as cache
+  note right of cache
     Redis
-  ]
+  end note
   
-  component "Очередь задач" as queue [
+  component "Очередь задач" as queue
+  note right of queue
     Celery + Redis
-  ]
+  end note
   
-  component "Объектное хранилище" as storage [
+  component "Объектное хранилище" as storage
+  note right of storage
     AWS S3 / MinIO
-  ]
+  end note
 }
 
 package "Клиентские приложения" {
-  component "Браузер" as browser [
+  component "Браузер" as browser
+  note right of browser
     Веб-приложение
-  ]
+  end note
   
-  component "Мобильное приложение" as mobile [
+  component "Мобильное приложение" as mobile
+  note right of mobile
     React Native / Flutter
-  ]
+  end note
 }
 
 api --> db : Чтение/запись
