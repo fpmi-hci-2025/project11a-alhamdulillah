@@ -534,3 +534,6 @@ Tab → "Применить", Enter          | T + K              | 0.4
 - [Далее: Анализ KLM/TLM](07_klm_tlm_analysis.md)
 - [Главная страница отчета](README.md)
 
+
+
+

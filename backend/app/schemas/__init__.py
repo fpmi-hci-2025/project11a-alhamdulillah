@@ -1,22 +1,24 @@
 from .menu import (
     CategoryBase,
     CategoryCreate,
-    Category,
+    CategoryResponse,
     MenuItemBase,
     MenuItemCreate,
-    MenuItem,
+    MenuItemResponse,
 )
-from .restaurant import RestaurantBase, RestaurantCreate, Restaurant
+from .restaurant import RestaurantBase, RestaurantCreate, RestaurantResponse
 
 __all__ = [
     "CategoryBase",
     "CategoryCreate",
-    "Category",
+    "CategoryResponse",
     "MenuItemBase",
     "MenuItemCreate",
-    "MenuItem",
+    "MenuItemResponse",
     "RestaurantBase",
     "RestaurantCreate",
-    "Restaurant",
+    "RestaurantResponse",
 ]
+
+
 

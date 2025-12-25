@@ -126,3 +126,6 @@ curl http://localhost:8000/api/categories
 curl http://localhost:8000/api/restaurants
 ```
 
+
+
+

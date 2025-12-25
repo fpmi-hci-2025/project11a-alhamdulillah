@@ -132,3 +132,6 @@ System Usability Scale (SUS) - стандартизированная анкет
 - [Далее: Рекомендации](10_recommendations.md)
 - [Главная страница отчета](README.md)
 
+
+
+

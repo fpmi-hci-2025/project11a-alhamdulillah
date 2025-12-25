@@ -136,3 +136,6 @@ def init_db(db: Session) -> None:
     db.commit()
     print("✅ Database initialized with seed data!")
 
+
+
+

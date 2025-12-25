@@ -15,3 +15,6 @@ class Restaurant(Base):
     phone = Column(String(20))
     working_hours = Column(JSON)
 
+
+
+

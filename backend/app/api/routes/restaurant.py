@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from typing import List
 from uuid import UUID
 
-from app.db.base import get_db
+from app.db.session import get_db
 from app.crud import restaurant as crud_restaurant
 from app.schemas.restaurant import RestaurantResponse
 
@@ -27,4 +27,6 @@ def get_restaurant(
     if not restaurant:
         raise HTTPException(status_code=404, detail="Restaurant not found")
     return restaurant
+
+
 

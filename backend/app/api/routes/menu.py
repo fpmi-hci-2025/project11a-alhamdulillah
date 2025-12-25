@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from typing import List, Optional
 from uuid import UUID
 
-from app.db.base import get_db
+from app.db.session import get_db
 from app.crud import menu as crud_menu
 from app.schemas.menu import MenuItemResponse, CategoryResponse
 
@@ -38,4 +38,6 @@ def get_menu_item(
 def get_categories(db: Session = Depends(get_db)):
     categories = crud_menu.category.get_multi(db)
     return categories
+
+
 
